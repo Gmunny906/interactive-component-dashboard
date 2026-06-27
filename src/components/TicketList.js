@@ -2,7 +2,7 @@ import TicketCard from "./TicketCard";
 
 function TicketList({ tickets }) {
   return (
-    <div>
+    <div className="ticket-list">
       <h2>Current Tickets</h2>
 
       {tickets.map((ticket) => (

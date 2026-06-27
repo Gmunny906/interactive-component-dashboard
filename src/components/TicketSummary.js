@@ -10,14 +10,23 @@ function TicketSummary({ tickets }) {
   ).length;
 
   return (
-    <div>
-      <h2>Ticket Summary</h2>
+    <div className="summary-container">
 
-      <p>Total Tickets: {tickets.length}</p>
+      <div className="summary-card">
+        <h3>Total Tickets</h3>
+        <h1>{tickets.length}</h1>
+      </div>
 
-      <p>Open Tickets: {openTickets}</p>
+      <div className="summary-card">
+        <h3>Open Tickets</h3>
+        <h1>{openTickets}</h1>
+      </div>
 
-      <p>Closed Tickets: {closedTickets}</p>
+      <div className="summary-card">
+        <h3>Closed Tickets</h3>
+        <h1>{closedTickets}</h1>
+      </div>
+
     </div>
   );
 }
