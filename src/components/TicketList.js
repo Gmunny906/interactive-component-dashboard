@@ -1,5 +1,19 @@
-function TicketList() {
-  return <div>Ticket List Component</div>;
+import TicketCard from "./TicketCard";
+
+function TicketList({ tickets }) {
+  return (
+    <div>
+      <h2>Current Tickets</h2>
+
+      {tickets.map((ticket) => (
+        <TicketCard
+          key={ticket.id}
+          ticket={ticket}
+        />
+      ))}
+    </div>
+  );
 }
 
+//each ticekt will become it's own component, this is the .map requirement
 export default TicketList;
